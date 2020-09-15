@@ -2285,32 +2285,33 @@ wUnownLetter:: db
 wMoveSelectionMenuType:: db
 
 ; corresponds to the data/pokemon/base_stats/*.asm contents
+; this entire thing is pretty much restructured...
 wCurBaseData::
-wBaseDexNo:: db
 wBaseStats::
 wBaseHP:: db
 wBaseAttack:: db
 wBaseDefense:: db
-wBaseSpeed:: db
 wBaseSpecialAttack:: db
 wBaseSpecialDefense:: db
+wBaseSpeed:: db
 wBaseType::
 wBaseType1:: db
 wBaseType2:: db
+wBaseAbilities::
+wBaseAbility1:: db
+wBaseAbility2:: db
+wBaseTrait:: db
 wBaseCatchRate:: db
 wBaseExp:: db
+wBaseEVs:: db
 wBaseItems::
 wBaseItem1:: db
 wBaseItem2:: db
 wBaseGender:: db
-wBaseUnknown1:: db
-wBaseEggSteps:: db
-wBaseUnknown2:: db
-wBasePicSize:: db
-wBaseUnusedFrontpic:: dw
-wBaseUnusedBackpic:: dw
 wBaseGrowthRate:: db
 wBaseEggGroups:: db
+wBaseEggSteps:: db
+wBasePicSize:: db
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR
 wCurBaseDataEnd::
 

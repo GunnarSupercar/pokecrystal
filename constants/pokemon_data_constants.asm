@@ -1,28 +1,29 @@
 ; base data struct members (see data/pokemon/base_stats/*.asm)
-BASE_DEX_NO      EQUS "(wBaseDexNo - wCurBaseData)"
 BASE_STATS       EQUS "(wBaseStats - wCurBaseData)"
 BASE_HP          EQUS "(wBaseHP - wCurBaseData)"
 BASE_ATK         EQUS "(wBaseAttack - wCurBaseData)"
-BASE_SPD         EQUS "(wBaseSpeed - wCurBaseData)"
+BASE_DEF         EQUS "(wBaseDefense - wCurBaseData)"
 BASE_SAT         EQUS "(wBaseSpecialAttack - wCurBaseData)"
 BASE_SDF         EQUS "(wBaseSpecialDefense - wCurBaseData)"
+BASE_SPD         EQUS "(wBaseSpeed - wCurBaseData)"
 BASE_TYPES       EQUS "(wBaseType - wCurBaseData)"
 BASE_TYPE_1      EQUS "(wBaseType1 - wCurBaseData)"
 BASE_TYPE_2      EQUS "(wBaseType2 - wCurBaseData)"
+BASE_ABILITIES   EQUS "(wBaseAbilities - wCurBaseData)"
+BASE_ABILITY_1   EQUS "(wBaseAbility1 - wCurBaseData)"
+BASE_ABILITY_2   EQUS "(wBaseAbility2 - wCurBaseData)"
+BASE_TRAIT       EQUS "(wBaseTrait - wCurBaseData)"
 BASE_CATCH_RATE  EQUS "(wBaseCatchRate - wCurBaseData)"
 BASE_EXP         EQUS "(wBaseExp - wCurBaseData)"
+BASE_EV          EQUS "(wBaseEVs - wCurBaseData)"
 BASE_ITEMS       EQUS "(wBaseItems - wCurBaseData)"
 BASE_ITEM_1      EQUS "(wBaseItem1 - wCurBaseData)"
 BASE_ITEM_2      EQUS "(wBaseItem2 - wCurBaseData)"
 BASE_GENDER      EQUS "(wBaseGender - wCurBaseData)"
-BASE_UNKNOWN_1   EQUS "(wBaseUnknown1 - wCurBaseData)"
-BASE_EGG_STEPS   EQUS "(wBaseEggSteps - wCurBaseData)"
-BASE_UNKNOWN_2   EQUS "(wBaseUnknown2 - wCurBaseData)"
-BASE_PIC_SIZE    EQUS "(wBasePicSize - wCurBaseData)"
-BASE_FRONTPIC    EQUS "(wBaseUnusedFrontpic - wCurBaseData)"
-BASE_BACKPIC     EQUS "(wBaseUnusedBackpic - wCurBaseData)"
 BASE_GROWTH_RATE EQUS "(wBaseGrowthRate - wCurBaseData)"
 BASE_EGG_GROUPS  EQUS "(wBaseEggGroups - wCurBaseData)"
+BASE_EGG_STEPS   EQUS "(wBaseEggSteps - wCurBaseData)"
+BASE_PIC_SIZE    EQUS "(wBasePicSize - wCurBaseData)"
 BASE_TMHM        EQUS "(wBaseTMHM - wCurBaseData)"
 BASE_DATA_SIZE   EQUS "(wCurBaseDataEnd - wCurBaseData)"
 
@@ -62,9 +63,6 @@ GENDER_UNKNOWN EQU -1
 	const EGG_DITTO         ; d
 	const EGG_DRAGON        ; e
 	const EGG_NONE          ; f (Undiscovered)
-
-; pokedex entries (see data/pokemon/dex_entries.asm)
-NUM_DEX_ENTRY_BANKS EQU 4
 
 ; party_struct members (see macros/wram.asm)
 MON_SPECIES            EQUS "(wPartyMon1Species - wPartyMon1)"
