@@ -99,7 +99,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw TeruSama7Desc
+	dw SilverScarfDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -641,8 +641,9 @@ BlkApricornDesc:
 	db   "A black APRICORN."
 	next "@"
 
-TeruSama7Desc:
-	db   "?@"
+SilverScarfDesc:
+	db   "Powers up normal-"
+	next "type moves. (HOLD)@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
@@ -657,7 +658,7 @@ SlowpokeTailDesc:
 	next "high.@"
 
 PinkBowDesc:
-	db   "Powers up normal-"
+	db   "Powers up fairy-"
 	next "type moves. (HOLD)@"
 
 StickDesc:

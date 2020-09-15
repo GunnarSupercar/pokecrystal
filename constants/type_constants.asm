@@ -6,32 +6,36 @@
 ; - TypeBoostItems (see data/types/type_boost_items.asm)
 	const_def
 
-PHYSICAL EQU const_value
 	const NORMAL
 	const FIGHTING
 	const FLYING
 	const POISON
 	const GROUND
 	const ROCK
-	const BIRD
 	const BUG
-	const GHOST
+	const DARK
 	const STEEL
 
 UNUSED_TYPES EQU const_value
-	const_next 19
-	const CURSE_TYPE
+	const BIRD
+	const CURSE_T
 UNUSED_TYPES_END EQU const_value
 
-SPECIAL EQU const_value
 	const FIRE
 	const WATER
 	const GRASS
 	const ELECTRIC
-	const PSYCHIC_TYPE
+	const PSYCHIC
 	const ICE
 	const DRAGON
-	const DARK
+	const GHOST
+	const FAIRY
 TYPES_END EQU const_value
 
 NUM_TYPES EQU TYPES_END + UNUSED_TYPES - UNUSED_TYPES_END
+
+TYPE_MASK EQU %00111111
+ADAPTIVE  EQU %00000000
+PHYSICAL  EQU %01000000
+SPECIAL   EQU %10000000
+STATUS    EQU %11000000

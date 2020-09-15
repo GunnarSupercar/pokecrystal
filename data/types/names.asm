@@ -6,19 +6,10 @@ TypeNames:
 	dw Poison
 	dw Ground
 	dw Rock
-	dw Bird
 	dw Bug
-	dw Ghost
+	dw Dark
 	dw Steel
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
+	dw Bird
 	dw CurseType
 	dw Fire
 	dw Water
@@ -27,24 +18,26 @@ TypeNames:
 	dw Psychic
 	dw Ice
 	dw Dragon
-	dw Dark
+	dw Ghost
+	dw Fairy
 
-Normal:    db "NORMAL@"
-Fighting:  db "FIGHTING@"
-Flying:    db "FLYING@"
-Poison:    db "POISON@"
-CurseType: db "???@"
-Fire:      db "FIRE@"
-Water:     db "WATER@"
-Grass:     db "GRASS@"
-Electric:  db "ELECTRIC@"
-Psychic:   db "PSYCHIC@"
-Ice:       db "ICE@"
-Ground:    db "GROUND@"
-Rock:      db "ROCK@"
-Bird:      db "BIRD@"
-Bug:       db "BUG@"
-Ghost:     db "GHOST@"
-Steel:     db "STEEL@"
-Dragon:    db "DRAGON@"
-Dark:      db "DARK@"
+Normal:    db "Normal@"
+Fighting:  db "Fighting@"
+Flying:    db "Flying@"
+Poison:    db "Poison@"
+CurseType: db "Ghost@"
+Fire:      db "Fire@"
+Water:     db "Water@"
+Grass:     db "Grass@"
+Electric:  db "Electric@"
+Psychic:   db "Psychic@"
+Ice:       db "Ice@"
+Ground:    db "Ground@"
+Rock:      db "Rock@"
+Bird:      db "???@"
+Bug:       db "Bug@"
+Ghost:     db "Ghost@"
+Steel:     db "Steel@"
+Dragon:    db "Dragon@"
+Dark:      db "Dark@"
+Fairy:     db "Fairy@"
