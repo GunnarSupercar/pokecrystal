@@ -11,8 +11,8 @@ MoveDescriptions::
 	dw ThunderpunchDescription
 	dw ScratchDescription
 	dw VicegripDescription
-	dw GuillotineDescription
-	dw RazorWindDescription
+	dw NightSlashDescription
+	dw AirSlashDescription
 	dw SwordsDanceDescription
 	dw CutDescription
 	dw GustDescription
@@ -20,7 +20,7 @@ MoveDescriptions::
 	dw WhirlwindDescription
 	dw FlyDescription
 	dw BindDescription
-	dw SlamDescription
+	dw AerialAceDescription
 	dw VineWhipDescription
 	dw StompDescription
 	dw DoubleKickDescription
@@ -31,7 +31,7 @@ MoveDescriptions::
 	dw HeadbuttDescription
 	dw HornAttackDescription
 	dw FuryAttackDescription
-	dw HornDrillDescription
+	dw DrillRunDescription
 	dw TackleDescription
 	dw BodySlamDescription
 	dw WrapDescription
@@ -164,7 +164,7 @@ MoveDescriptions::
 	dw SuperFangDescription
 	dw SlashDescription
 	dw SubstituteDescription
-	dw StruggleDescription
+	dw PsystrikeDescription
 	dw SketchDescription
 	dw TripleKickDescription
 	dw ThiefDescription
@@ -251,18 +251,15 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
-	dw MoveFFDescription
+	dw FairyWindDescription
+	dw MoonblastDescription
+	dw PlayRoughDescription
+	dw StruggleDescription
 	dw Move00Description
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
-MoveFFDescription:
+PsystrikeDescription
 Move00Description:
-	db "?@"
+	db   "?@"
 
 PoundDescription:
 	db   "Pounds with fore-"
@@ -308,11 +305,11 @@ VicegripDescription:
 	db   "Grips with power-"
 	next "ful pincers.@"
 
-GuillotineDescription:
+NightSlashDescription:
 	db   "A one-hit KO,"
 	next "pincer attack.@"
 
-RazorWindDescription:
+AirSlashDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
@@ -344,7 +341,7 @@ BindDescription:
 	db   "Binds the target"
 	next "for 2-5 turns.@"
 
-SlamDescription:
+AerialAceDescription:
 	db   "Slams the foe with"
 	next "a tail, vine, etc.@"
 
@@ -388,7 +385,7 @@ FuryAttackDescription:
 	db   "Jabs the target"
 	next "2-5 times.@"
 
-HornDrillDescription:
+DrillRunDescription:
 	db   "A one-hit KO,"
 	next "drill attack.@"
 
@@ -1258,7 +1255,7 @@ FutureSightDescription:
 
 RockSmashDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower Defense.@"
 
 WhirlpoolDescription:
 	db   "Traps the foe for"
@@ -1267,3 +1264,19 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+	
+FairyWindDescription:
+	db   "Stirs a magic wind"
+	next "to strike.@"
+	
+MoonblastDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
+	
+PlayRoughDescription:
+	db   "An attack that may"
+	next "lower Attack.@"
+
+StruggleDescription:
+	db   "Used only if all"
+	next "PP are exhausted.@"

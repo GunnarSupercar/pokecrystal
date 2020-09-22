@@ -12,8 +12,8 @@ BattleAnimations::
 	dw BattleAnim_Thunderpunch
 	dw BattleAnim_Scratch
 	dw BattleAnim_Vicegrip
-	dw BattleAnim_Guillotine
-	dw BattleAnim_RazorWind
+	dw BattleAnim_NightSlash
+	dw BattleAnim_AirSlash
 	dw BattleAnim_SwordsDance
 	dw BattleAnim_Cut
 	dw BattleAnim_Gust
@@ -21,7 +21,7 @@ BattleAnimations::
 	dw BattleAnim_Whirlwind
 	dw BattleAnim_Fly
 	dw BattleAnim_Bind
-	dw BattleAnim_Slam
+	dw BattleAnim_AerialAce
 	dw BattleAnim_VineWhip
 	dw BattleAnim_Stomp
 	dw BattleAnim_DoubleKick
@@ -32,7 +32,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_HornAttack
 	dw BattleAnim_FuryAttack
-	dw BattleAnim_HornDrill
+	dw BattleAnim_Drill Run
 	dw BattleAnim_Tackle
 	dw BattleAnim_BodySlam
 	dw BattleAnim_Wrap
@@ -165,7 +165,7 @@ BattleAnimations::
 	dw BattleAnim_SuperFang
 	dw BattleAnim_Slash
 	dw BattleAnim_Substitute
-	dw BattleAnim_Struggle
+	dw BattleAnim_Psystrike
 	dw BattleAnim_Sketch
 	dw BattleAnim_TripleKick
 	dw BattleAnim_Thief
@@ -252,11 +252,12 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_252
-	dw BattleAnim_253
-	dw BattleAnim_254
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_FairyWind
+	dw BattleAnim_Moonblast
+	dw BattleAnim_PlayRough
+	dw BattleAnim_Struggle
 ; $100
+	dw BattleAnim_SweetScent2
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
@@ -281,9 +282,8 @@ BattleAnimations::
 	dw BattleAnim_HitConfusion
 
 BattleAnim_0:
-BattleAnim_252:
-BattleAnim_253:
-BattleAnim_254:
+BattleAnim_Moonblast:
+BattleAnim_PlayRough:
 BattleAnim_MirrorMove:
 	anim_ret
 
@@ -1289,7 +1289,7 @@ BattleAnim_Thunder:
 	anim_wait 48
 	anim_ret
 
-BattleAnim_RazorWind:
+BattleAnim_AirSlash: ; needs to be fixed to remove the setup animation
 	anim_if_param_equal $1, BattleAnim_FocusEnergy
 	anim_1gfx ANIM_GFX_WHIP
 	anim_bgeffect ANIM_BG_06, $0, $1, $0
@@ -1339,6 +1339,7 @@ BattleAnim_Sonicboom_JP:
 	anim_ret
 
 BattleAnim_Gust:
+BattleAnim_FairyWind:
 BattleAnim_Sonicboom:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 .loop
@@ -2261,7 +2262,7 @@ BattleAnim_FuryAttack:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_HornDrill:
+BattleAnim_DrillRun: ; remove flashing effect?
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
 	anim_obj ANIM_OBJ_HORN, 72, 80, $3
@@ -2508,7 +2509,7 @@ BattleAnim_DrillPeck:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Guillotine:
+BattleAnim_NightSlash: ; change SFX to slashing?
 	anim_1gfx ANIM_GFX_CUT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $10
 	anim_bgeffect ANIM_BG_1F, $40, $2, $0
@@ -2967,6 +2968,7 @@ BattleAnim_Waterfall:
 	anim_wait 8
 	anim_ret
 
+BattleAnim_Psystrike:
 BattleAnim_PsychicM:
 	anim_1gfx ANIM_GFX_PSYCHIC
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -3064,7 +3066,7 @@ BattleAnim_WingAttack:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Slam:
+BattleAnim_AerialAce: ; it could use some tweaks, gen 1 Fly SFX?
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_WING_ATTACK
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2

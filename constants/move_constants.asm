@@ -17,8 +17,8 @@
 	const THUNDERPUNCH ; 09
 	const SCRATCH      ; 0a
 	const VICEGRIP     ; 0b
-	const GUILLOTINE   ; 0c
-	const RAZOR_WIND   ; 0d
+	const NIGHT_SLASH  ; 0c ; previously GUILLOTINE
+	const AIR_SLASH    ; 0d ; previously RAZOR_WIND
 	const SWORDS_DANCE ; 0e
 	const CUT          ; 0f
 	const GUST         ; 10
@@ -26,7 +26,7 @@
 	const WHIRLWIND    ; 12
 	const FLY          ; 13
 	const BIND         ; 14
-	const SLAM         ; 15
+	const AERIAL_ACE   ; 15 ; previously SLAM
 	const VINE_WHIP    ; 16
 	const STOMP        ; 17
 	const DOUBLE_KICK  ; 18
@@ -37,7 +37,7 @@
 	const HEADBUTT     ; 1d
 	const HORN_ATTACK  ; 1e
 	const FURY_ATTACK  ; 1f
-	const HORN_DRILL   ; 20
+	const DRILL_RUN    ; 20 ; previously HORN_DRILL
 	const TACKLE       ; 21
 	const BODY_SLAM    ; 22
 	const WRAP         ; 23
@@ -66,7 +66,7 @@
 	const ICE_BEAM     ; 3a
 	const BLIZZARD     ; 3b
 	const PSYBEAM      ; 3c
-	const BUBBLEBEAM   ; 3d
+	const BUBBLE_BEAM  ; 3d ; note the renamed constant
 	const AURORA_BEAM  ; 3e
 	const HYPER_BEAM   ; 3f
 	const PECK         ; 40
@@ -81,7 +81,7 @@
 	const LEECH_SEED   ; 49
 	const GROWTH       ; 4a
 	const RAZOR_LEAF   ; 4b
-	const SOLARBEAM    ; 4c
+	const SOLAR_BEAM   ; 4c ; note the renamed constant
 	const POISONPOWDER ; 4d
 	const STUN_SPORE   ; 4e
 	const SLEEP_POWDER ; 4f
@@ -170,7 +170,7 @@
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
-	const STRUGGLE     ; a5
+	const PSYSTRIKE    ; a5
 	const SKETCH       ; a6
 	const TRIPLE_KICK  ; a7
 	const THIEF        ; a8
@@ -257,34 +257,37 @@
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 	const BEAT_UP      ; fb
+	const FAIRY_WIND   ; fc
+	const MOONBLAST    ; fd
+	const PLAY_ROUGH   ; fe
+	const STRUGGLE     ; ff
 NUM_ATTACKS EQU const_value - 1
 
 ; Battle animations use the same constants as the moves up to this point
-	const_next $ff
-	const ANIM_SWEET_SCENT_2     ; ff
-	const ANIM_THROW_POKE_BALL   ; 100
-	const ANIM_SEND_OUT_MON      ; 101
-	const ANIM_RETURN_MON        ; 102
-	const ANIM_CONFUSED          ; 103
-	const ANIM_SLP               ; 104
-	const ANIM_BRN               ; 105
-	const ANIM_PSN               ; 106
-	const ANIM_SAP               ; 107
-	const ANIM_FRZ               ; 108
-	const ANIM_PAR               ; 109
-	const ANIM_IN_LOVE           ; 10a
-	const ANIM_IN_SANDSTORM      ; 10b
-	const ANIM_IN_NIGHTMARE      ; 10c
-	const ANIM_IN_WHIRLPOOL      ; 10d
+	const ANIM_SWEET_SCENT_2     ; 100
+	const ANIM_THROW_POKE_BALL   ; 101
+	const ANIM_SEND_OUT_MON      ; 102
+	const ANIM_RETURN_MON        ; 103
+	const ANIM_CONFUSED          ; 104
+	const ANIM_SLP               ; 105
+	const ANIM_BRN               ; 106
+	const ANIM_PSN               ; 107
+	const ANIM_SAP               ; 108
+	const ANIM_FRZ               ; 109
+	const ANIM_PAR               ; 10a
+	const ANIM_IN_LOVE           ; 10b
+	const ANIM_IN_SANDSTORM      ; 10c
+	const ANIM_IN_NIGHTMARE      ; 10d
+	const ANIM_IN_WHIRLPOOL      ; 10e
 ; battle anims
-	const ANIM_MISS              ; 10e
-	const ANIM_ENEMY_DAMAGE      ; 10f
-	const ANIM_ENEMY_STAT_DOWN   ; 110
-	const ANIM_PLAYER_STAT_DOWN  ; 111
-	const ANIM_PLAYER_DAMAGE     ; 112
-	const ANIM_WOBBLE            ; 113
-	const ANIM_SHAKE             ; 114
-	const ANIM_HIT_CONFUSION     ; 115
+	const ANIM_MISS              ; 10f
+	const ANIM_ENEMY_DAMAGE      ; 110
+	const ANIM_ENEMY_STAT_DOWN   ; 111
+	const ANIM_PLAYER_STAT_DOWN  ; 112
+	const ANIM_PLAYER_DAMAGE     ; 113
+	const ANIM_WOBBLE            ; 114
+	const ANIM_SHAKE             ; 115
+	const ANIM_HIT_CONFUSION     ; 116
 
 ; wNumHits uses offsets from ANIM_MISS
 	const_def
