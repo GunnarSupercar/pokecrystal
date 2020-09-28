@@ -130,8 +130,8 @@ MoveDescriptions::
 	dw ClampDescription
 	dw SwiftDescription
 	dw SkullBashDescription
-	dw SpikeCannonDescription
-	dw ConstrictDescription
+	dw PoisonJabDescription
+	dw DragonClawDescription
 	dw AmnesiaDescription
 	dw KinesisDescription
 	dw SoftboiledDescription
@@ -170,7 +170,7 @@ MoveDescriptions::
 	dw ThiefDescription
 	dw SpiderWebDescription
 	dw MindReaderDescription
-	dw NightmareDescription
+	dw OminousWindDescription
 	dw FlameWheelDescription
 	dw SnoreDescription
 	dw CurseDescription
@@ -238,7 +238,7 @@ MoveDescriptions::
 	dw MoonlightDescription
 	dw HiddenPowerDescription
 	dw CrossChopDescription
-	dw TwisterDescription
+	dw HurricaneDescription
 	dw RainDanceDescription
 	dw SunnyDayDescription
 	dw CrunchDescription
@@ -306,12 +306,12 @@ VicegripDescription:
 	next "ful pincers.@"
 
 NightSlashDescription:
-	db   "A one-hit KO,"
-	next "pincer attack.@"
+	db   "Has a high criti-"
+	next "cal hit ratio.@"
 
 AirSlashDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "An attack that may"
+	next "cause flinching.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"
@@ -781,13 +781,13 @@ SkullBashDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
-SpikeCannonDescription:
-	db   "Fires spikes to"
-	next "hit 2-5 times.@"
-
-ConstrictDescription:
+PoisonJabDescription:
 	db   "An attack that may"
-	next "lower SPEED.@"
+	next "poison the target.@"
+
+DragonClawDescription:
+	db   "Hooks and slashes"
+	next "with sharp claws.@"
 
 AmnesiaDescription:
 	db   "Sharply raises the"
@@ -941,9 +941,9 @@ MindReaderDescription:
 	db   "Ensures the next"
 	next "attack will hit.@"
 
-NightmareDescription:
-	db   "A sleeper loses"
-	next "1/4 HP every turn.@"
+OminousWindDescription:
+	db   "An attack that may"
+	next "raise all stats.@"
 
 FlameWheelDescription:
 	db   "An attack that may"
@@ -1213,9 +1213,9 @@ CrossChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
-TwisterDescription:
-	db   "Whips up a tornado"
-	next "to attack.@"
+HurricaneDescription:
+	db   "An attack that may"
+	next "cause confusion.@"
 
 RainDanceDescription:
 	db   "Boosts water-type"

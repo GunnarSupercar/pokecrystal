@@ -1882,18 +1882,19 @@ SkullBash:
 	statupmessage
 	endmove
 
-Twister:
+Hurricane:
 	checkobedience
 	usedmovetext
 	doturn
 	critical
 	damagestats
 	damagecalc
-	stab
-	damagevariation
-	doubleflyingdamage
+	thunderaccuracy ; Hurricane is identical to Thunder in this regard, though I'm not sure what the type check in this command is for.
 	checkhit
 	effectchance
+	stab
+	damagevariation
+	doubleflyingdamage ; Hurricane shouldn't double damage on flying targets, but it will hit them - not really worth addressing since Fly's existence is temporary.
 	moveanim
 	failuretext
 	applydamage
@@ -1901,9 +1902,9 @@ Twister:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	flinchtarget
+	confusetarget
 	endmove
-
+	
 Earthquake:
 	checkobedience
 	usedmovetext

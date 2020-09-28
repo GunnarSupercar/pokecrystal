@@ -295,10 +295,11 @@ Moves:
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,   ADAPTIVE,   100, 20,   0
 	; Skull Bash
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        100, NORMAL,   PHYSICAL,   100, 15,   0
-	; Spike Cannon, to be replaced
-	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, NORMAL,   PHYSICAL,   100, 15,   0
-	; Constrict, to be replaced
-	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,   PHYSICAL,   100, 35,  10
+	; Poison Jab, previously Spike Cannon
+	; -5 PP
+	move POISON_JAB,   EFFECT_POISON_HIT,         80, POISON,   PHYSICAL,   100, 15,  30
+	; Dragon Claw, previously Constrict
+	move DRAGON_CLAW,  EFFECT_NORMAL_HiT,         80, DRAGON,   PHYSICAL,   100, 15,  10
 	; Amnesia
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC,  STATUS,     100, 20,   0
 	; Kinesis, to be replaced
@@ -317,8 +318,8 @@ Moves:
 	; Barrage, to be replaced
 	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,   PHYSICAL,    85, 20,   0
 	; Leech Life
-	; +40 power, -5 PP, may be buffed higher
-	move LEECH_LIFE,   EFFECT_LEECH_HIT,          60, BUG,      PHYSICAL,   100, 10,   0
+	; +55 power, -5 PP
+	move LEECH_LIFE,   EFFECT_LEECH_HIT,          75, BUG,      PHYSICAL,   100, 10,   0
 	; Lovely Kiss
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,   STATUS,      75, 10,   0
 	; Sky Attack
@@ -378,7 +379,9 @@ Moves:
 	move THIEF,        EFFECT_THIEF,              40, DARK,          PHYSICAL, 100, 10, 100
 	move SPIDER_WEB,   EFFECT_MEAN_LOOK,           0, BUG,           STATUS,   100, 10,   0
 	move MIND_READER,  EFFECT_LOCK_ON,             0, NORMAL,        STATUS,   100,  5,   0
-	move NIGHTMARE,    EFFECT_NIGHTMARE,           0, GHOST,         STATUS,   100, 15,   0
+	; Ominous Wind, previously Nightmare
+	; +5 PP
+	move OMINOUS_WIND, EFFECT_ALL_UP_HIT,         60, GHOST,    ADAPTIVE, 100, 10,  10
 	move FLAME_WHEEL,  EFFECT_FLAME_WHEEL,        60, FIRE,          PHYSICAL, 100, 25,  10
 	move SNORE,        EFFECT_SNORE,              40, NORMAL,        SPECIAL,  100, 15,  30
 	move CURSE,        EFFECT_CURSE,               0, GHOST,         STATUS,   100, 10,   0
@@ -446,7 +449,9 @@ Moves:
 	move MOONLIGHT,    EFFECT_MOONLIGHT,           0, NORMAL,        STATUS,   100,  5,   0
 	move HIDDEN_POWER, EFFECT_HIDDEN_POWER,        1, NORMAL,        SPECIAL,  100, 15,   0
 	move CROSS_CHOP,   EFFECT_NORMAL_HIT,        100, FIGHTING,      PHYSICAL,  80,  5,   0
-	move TWISTER,      EFFECT_TWISTER,            40, DRAGON,        SPECIAL,  100, 20,  20
+	; Hurricane, previously Twister
+	; +10 accuracy, -5 PP
+	move HURRICANE,    EFFECT_HURRICANE,         110, FLYING,   SPECIAL,   80,  5,  30
 	move RAIN_DANCE,   EFFECT_RAIN_DANCE,          0, WATER,         STATUS,    90,  5,   0
 	move SUNNY_DAY,    EFFECT_SUNNY_DAY,           0, FIRE,          STATUS,    90,  5,   0
 	move CRUNCH,       EFFECT_SP_DEF_DOWN_HIT,    80, DARK,          PHYSICAL, 100, 15,  20

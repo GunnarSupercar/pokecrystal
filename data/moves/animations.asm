@@ -131,8 +131,8 @@ BattleAnimations::
 	dw BattleAnim_Clamp
 	dw BattleAnim_Swift
 	dw BattleAnim_SkullBash
-	dw BattleAnim_SpikeCannon
-	dw BattleAnim_Constrict
+	dw BattleAnim_PoisonJab
+	dw BattleAnim_DragonClaw
 	dw BattleAnim_Amnesia
 	dw BattleAnim_Kinesis
 	dw BattleAnim_Softboiled
@@ -171,7 +171,7 @@ BattleAnimations::
 	dw BattleAnim_Thief
 	dw BattleAnim_SpiderWeb
 	dw BattleAnim_MindReader
-	dw BattleAnim_Nightmare
+	dw BattleAnim_OminousWind
 	dw BattleAnim_FlameWheel
 	dw BattleAnim_Snore
 	dw BattleAnim_Curse
@@ -239,7 +239,7 @@ BattleAnimations::
 	dw BattleAnim_Moonlight
 	dw BattleAnim_HiddenPower
 	dw BattleAnim_CrossChop
-	dw BattleAnim_Twister
+	dw BattleAnim_Hurricane
 	dw BattleAnim_RainDance
 	dw BattleAnim_SunnyDay
 	dw BattleAnim_Crunch
@@ -270,7 +270,7 @@ BattleAnimations::
 	dw BattleAnim_Par
 	dw BattleAnim_InLove
 	dw BattleAnim_InSandstorm
-	dw BattleAnim_InNightmare
+	dw BattleAnim_InNightmare ; InHail? 
 	dw BattleAnim_InWhirlpool
 	dw BattleAnim_Miss
 	dw BattleAnim_EnemyDamage
@@ -1805,19 +1805,6 @@ BattleAnim_Confusion:
 	anim_call BattleAnim_ShowMon_1
 	anim_ret
 
-BattleAnim_Constrict:
-	anim_1gfx ANIM_GFX_ROPE
-	anim_sound 0, 1, SFX_BIND
-	anim_obj ANIM_OBJ_49, 132, 64, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_48, 132, 48, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_49, 132, 40, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_48, 132, 56, $0
-	anim_wait 64
-	anim_ret
-
 BattleAnim_Earthquake:
 	anim_bgeffect ANIM_BG_1F, $60, $4, $10
 .loop
@@ -2323,7 +2310,7 @@ BattleAnim_PinMissile:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_SpikeCannon:
+BattleAnim_PoisonJab: ; animation should be faster, possibly with another effect to denote poison
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
 .loop
 	anim_obj ANIM_OBJ_60, 64, 92, $18
@@ -2617,6 +2604,7 @@ BattleAnim_SkyAttack:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_OminousWind:
 BattleAnim_NightShade:
 	anim_1gfx ANIM_GFX_HIT
 	anim_bgp $1b
@@ -3183,15 +3171,15 @@ BattleAnim_MindReader:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_Nightmare:
-	anim_1gfx ANIM_GFX_ANGELS
-	anim_bgp $1b
-	anim_obp0 $f
-	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $0
-	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $a0
-	anim_sound 0, 1, SFX_NIGHTMARE
-	anim_wait 96
-	anim_ret
+; BattleAnim_Nightmare:
+;	anim_1gfx ANIM_GFX_ANGELS
+;	anim_bgp $1b
+;	anim_obp0 $f
+;	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $0
+;	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $a0
+;	anim_sound 0, 1, SFX_NIGHTMARE
+;	anim_wait 96
+;	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE
@@ -3662,6 +3650,7 @@ BattleAnim_LockOn:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_DragonClaw: ; I'm putting it here for now since it's a similar idea, but the effect should be shorter and it should slash instead of slam.
 BattleAnim_Outrage:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_1Row
@@ -4362,7 +4351,7 @@ BattleAnim_CrossChop:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_Twister:
+BattleAnim_Hurricane:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 .loop1
 	anim_sound 0, 0, SFX_RAZOR_WIND

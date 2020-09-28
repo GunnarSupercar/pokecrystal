@@ -99,7 +99,7 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw SilverScarfDesc
+	dw TeruSama7Desc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -169,16 +169,13 @@ ItemDescriptions:
 	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
-	dw PolkadotBowDesc
-	dw TeruSama22Desc
+	dw SilkScarfDesc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw GoldBerryDesc
 	dw SquirtBottleDesc
-	dw TeruSama23Desc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw TeruSama24Desc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -189,6 +186,9 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MirageMailDesc
+	dw TeruSama25Desc
+	dw TeruSama25Desc
+	dw TeruSama25Desc
 	dw TeruSama25Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
@@ -641,7 +641,7 @@ BlkApricornDesc:
 	db   "A black APRICORN."
 	next "@"
 
-SilverScarfDesc:
+TeruSama7Desc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
 
@@ -906,12 +906,9 @@ SunStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-PolkadotBowDesc:
+SilkScarfDesc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
-
-TeruSama22Desc:
-	db   "?@"
 
 UpGradeDesc:
 	db   "A mysterious box"
@@ -929,9 +926,6 @@ SquirtBottleDesc:
 	db   "A bottle used for"
 	next "watering plants.@"
 
-TeruSama23Desc:
-	db   "?@"
-
 ParkBallDesc:
 	db   "The Bug-Catching"
 	next "Contest BALL.@"
@@ -939,9 +933,6 @@ ParkBallDesc:
 RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
-
-TeruSama24Desc:
-	db   "?@"
 
 BrickPieceDesc:
 	db   "A rare chunk of"

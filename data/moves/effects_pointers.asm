@@ -146,7 +146,7 @@ MoveEffectsPointers:
 	dw PsychUp
 	dw MirrorCoat
 	dw SkullBash
-	dw Twister
+	dw Hurricane
 	dw Earthquake
 	dw FutureSight
 	dw Gust

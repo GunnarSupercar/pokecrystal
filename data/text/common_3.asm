@@ -478,6 +478,10 @@ _EvolvingText::
 _MartHowManyText::
 	text "How many?"
 	done
+	
+_MartAlreadyHaveTMText::
+	text "You already have"
+	line "that TM."
 
 _MartFinalPriceText::
 	text_decimal wItemQuantityChangeBuffer, 1, 2

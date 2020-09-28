@@ -105,7 +105,7 @@
 	const WHT_APRICORN ; 61
 	const BLACKBELT_I  ; 62
 	const BLK_APRICORN ; 63
-	const SILVER_SCARF ; 64
+	const ITEM_64      ; 64
 	const PNK_APRICORN ; 65
 	const BLACKGLASSES ; 66
 	const SLOWPOKETAIL ; 67
@@ -175,27 +175,23 @@
 	const NORMAL_BOX   ; a7
 	const GORGEOUS_BOX ; a8
 	const SUN_STONE    ; a9
-	const POLKADOT_BOW ; aa
-	const ITEM_AB      ; ab
-	const UP_GRADE     ; ac
-	const BERRY        ; ad
-	const GOLD_BERRY   ; ae
-	const SQUIRTBOTTLE ; af
-	const ITEM_B0      ; b0
-	const PARK_BALL    ; b1
-	const RAINBOW_WING ; b2
-	const ITEM_B3      ; b3
-	const BRICK_PIECE  ; b4
-	const SURF_MAIL    ; b5
-	const LITEBLUEMAIL ; b6
-	const PORTRAITMAIL ; b7
-	const LOVELY_MAIL  ; b8
-	const EON_MAIL     ; b9
-	const MORPH_MAIL   ; ba
-	const BLUESKY_MAIL ; bb
-	const MUSIC_MAIL   ; bc
-	const MIRAGE_MAIL  ; bd
-	const ITEM_BE      ; be
+	const SILK_SCARF   ; aa
+	const UP_GRADE     ; ab
+	const BERRY        ; ac
+	const GOLD_BERRY   ; ad
+	const SQUIRTBOTTLE ; ae
+	const PARK_BALL    ; af
+	const RAINBOW_WING ; b0
+	const BRICK_PIECE  ; b1
+	const SURF_MAIL    ; b2
+	const LITEBLUEMAIL ; b3
+	const PORTRAITMAIL ; b4
+	const LOVELY_MAIL  ; b5
+	const EON_MAIL     ; b6
+	const MORPH_MAIL   ; b7
+	const BLUESKY_MAIL ; b8
+	const MUSIC_MAIL   ; b9
+	const MIRAGE_MAIL  ; ba
 
 __tmhm_value__ = 1
 
@@ -221,64 +217,72 @@ __tmhm_value__ = __tmhm_value__ + 1
 ENDM
 
 ; see data/moves/tmhm_moves.asm for moves
-	add_tm DYNAMICPUNCH ; bf
-	add_tm HEADBUTT     ; c0
-	add_tm CURSE        ; c1
-	add_tm ROLLOUT      ; c2
-	const ITEM_C3       ; c3
-	add_tm ROAR         ; c4
-	add_tm TOXIC        ; c5
-	add_tm ZAP_CANNON   ; c6
-	add_tm ROCK_SMASH   ; c7
-	add_tm PSYCH_UP     ; c8
-	add_tm HIDDEN_POWER ; c9
-	add_tm SUNNY_DAY    ; ca
-	add_tm SWEET_SCENT  ; cb
-	add_tm SNORE        ; cc
-	add_tm BLIZZARD     ; cd
-	add_tm HYPER_BEAM   ; ce
-	add_tm ICY_WIND     ; cf
-	add_tm PROTECT      ; d0
-	add_tm RAIN_DANCE   ; d1
-	add_tm GIGA_DRAIN   ; d2
-	add_tm ENDURE       ; d3
-	add_tm FRUSTRATION  ; d4
-	add_tm SOLARBEAM    ; d5
-	add_tm IRON_TAIL    ; d6
-	add_tm DRAGONBREATH ; d7
-	add_tm THUNDER      ; d8
-	add_tm EARTHQUAKE   ; d9
-	add_tm RETURN       ; da
-	add_tm DIG          ; db
-	const ITEM_DC       ; dc
-	add_tm PSYCHIC_M    ; dd
-	add_tm SHADOW_BALL  ; de
-	add_tm MUD_SLAP     ; df
-	add_tm DOUBLE_TEAM  ; e0
-	add_tm ICE_PUNCH    ; e1
-	add_tm SWAGGER      ; e2
-	add_tm SLEEP_TALK   ; e3
-	add_tm SLUDGE_BOMB  ; e4
-	add_tm SANDSTORM    ; e5
-	add_tm FIRE_BLAST   ; e6
-	add_tm SWIFT        ; e7
-	add_tm DEFENSE_CURL ; e8
-	add_tm THUNDERPUNCH ; e9
-	add_tm DREAM_EATER  ; ea
-	add_tm DETECT       ; eb
-	add_tm REST         ; ec
-	add_tm ATTRACT      ; ed
-	add_tm THIEF        ; ee
-	add_tm STEEL_WING   ; ef
-	add_tm FIRE_PUNCH   ; f0
-	add_tm FURY_CUTTER  ; f1
-	add_tm NIGHTMARE    ; f2
+	add_tm DYNAMICPUNCH ; bb - TM01
+	add_tm DRAGON_CLAW  ; bc - TM02
+	add_tm BUBBLE_BEAM  ; bd - TM03
+	add_tm ; be - TM04
+	add_tm ROAR         ; bf - TM05
+	add_tm TOXIC        ; c0 - TM06
+	add_tm ; c1 - TM07
+	add_tm CURSE        ; c2 - TM08
+	add_tm HEADBUTT     ; c3 - TM09
+	add_tm HIDDEN_POWER ; c4 - TM10
+	add_tm SUNNY_DAY    ; c5 - TM11
+	add_tm ; c6 - TM12
+	add_tm ICE_BEAM     ; c7 - TM13
+	add_tm BLIZZARD     ; c8 - TM14
+	add_tm HYPER_BEAM   ; c9 - TM15
+	add_tm LIGHT_SCREEN ; ca - TM16
+	add_tm PROTECT      ; cb - TM17
+	add_tm RAIN_DANCE   ; cc - TM18
+	add_tm GIGA_DRAIN   ; cd - TM19
+	add_tm SAFEGUARD    ; ce - TM20
+	add_tm ; cf - TM21
+	add_tm SOLARBEAM    ; d0 - TM22
+	add_tm IRON_TAIL    ; d1 - TM23
+	add_tm THUNDERBOLT  ; d2 - TM24
+	add_tm THUNDER      ; d3 - TM25
+	add_tm EARTHQUAKE   ; d4 - TM26
+	add_tm RETURN       ; d5 - TM27
+	add_tm DIG          ; d6 - TM28
+	add_tm PSYCHIC_M    ; d7 - TM29
+	add_tm SHADOW_BALL  ; d8 - TM30
+	add_tm SUBMISSION   ; d9 - TM31
+	add_tm DOUBLE_TEAM  ; da - TM32
+	add_tm REFLECT      ; db - TM33
+	add_tm 
+	add_tm FLAMETHROWER ; dd - TM35
+	add_tm SLUDGE_BOMB  ; de - TM36
+	add_tm SANDSTORM    ; df - TM37
+	add_tm FIRE_BLAST   ; e0 - TM38
+	add_tm SWIFT        ; e1 - TM39
+	add_tm AERIAL_ACE   ; e2 - TM40
+	add_tm HURRICANE    ; e3 - TM41
+	add_tm DREAM_EATER  ; e4 - TM42
+	add_tm SKY_ATTACK   ; e5 - TM43
+	add_tm REST         ; e6 - TM44
+	add_tm ATTRACT      ; e7 - TM45
+	add_tm THIEF        ; e8 - TM46
+	add_tm STEEL_WING   ; e9 - TM47
+	add_tm ROCK_SLIDE   ; ea - TM48
+	add_tm FURY_CUTTER  ; eb - TM49
+	add_tm FLASH        ; ec - TM50
+	add_tm ; ed - TM51
+	add_tm POISON_JAB   ; ee - TM52
+	add_tm ICY_WIND     ; ef - TM53
+	add_tm FALSE_SWIPE  ; f0 - TM54
+	add_tm ; f1 - TM55
+	add_tm PLAY_ROUGH   ; f2 - TM56
+	add_tm ; f3 - TM57
+	add_tm ; f4 - TM58
+	add_tm ; f5 - TM59
+	add_tm SUBSTITUTE   ; f6 - TM60
 NUM_TMS EQU __tmhm_value__ - 1
 
 add_hm: MACRO
 ; Defines three constants:
-; - HM_\1: the item id, starting at $f3
-; - \1_TMNUM: the learnable TM/HM flag, starting at 51
+; - HM_\1: the item id, starting at $f7
+; - \1_TMNUM: the learnable TM/HM flag, starting at 61
 ; - HM##_MOVE: alias for the move id, equal to the value of \1
 ; The first usage also defines HM01 as the first TM item id.
 if !DEF(HM01)
@@ -298,18 +302,19 @@ PURGE HM_VALUE
 __tmhm_value__ = __tmhm_value__ + 1
 ENDM
 
-	add_hm CUT          ; f3
-	add_hm FLY          ; f4
-	add_hm SURF         ; f5
-	add_hm STRENGTH     ; f6
-	add_hm FLASH        ; f7
-	add_hm WHIRLPOOL    ; f8
-	add_hm WATERFALL    ; f9
+	add_hm CUT          ; f7 - HM01
+	add_hm FLY          ; f8 - HM02
+	add_hm SURF         ; f9 - HM03
+	add_hm STRENGTH     ; fa - HM04
+	add_hm WHIRLPOOL    ; fb - HM05
+	add_hm ROCK_SMASH   ; fc - HM06
+	add_hm WATERFALL    ; fd - HM07
+	add_hm ; fe - HM08
 NUM_HMS EQU __tmhm_value__ - NUM_TMS - 1
 
 add_mt: MACRO
 ; Defines two constants:
-; - \1_TMNUM: the learnable TM/HM flag, starting at 58
+; - \1_TMNUM: the learnable TM/HM flag, starting at 69
 ; - MT##_MOVE: alias for the move id, equal to the value of \1
 MT_VALUE EQU __tmhm_value__ - NUM_TMS - NUM_HMS
 if MT_VALUE < 10
@@ -324,14 +329,29 @@ PURGE MT_VALUE
 __tmhm_value__ = __tmhm_value__ + 1
 ENDM
 
-	add_mt FLAMETHROWER
-	add_mt THUNDERBOLT
-	add_mt ICE_BEAM
+	add_mt BODY_SLAM
+	add_mt TRI_ATTACK
+	add_mt FIRE_PUNCH
+	add_mt THUNDERPUNCH
+	add_mt ICE_PUNCH
+	add_mt SLEEP_TALK
+	add_mt SWORDS_DANCE
+	add_mt SEISMIC_TOSS
+	add_mt ; ZEN_HEADBUTT
+	add_mt ; EARTH_POWER	
+	add_mt ; SIGNAL_BEAM
+	add_mt OMINOUS_WIND
+	add_mt ; 
+	add_mt THUNDER_WAVE
+	add_mt HEAL_BELL
+	add_mt HAZE
+	add_mt PSYCH_UP
+	add_mt TELEPORT
+	add_mt 
+	add_mt EXPLOSION
 NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 NUM_TM_HM_TUTOR EQU __tmhm_value__ - 1
-
-	const ITEM_FA       ; fa
 
 USE_SCRIPT_VAR EQU $00
 ITEM_FROM_MEM  EQU $ff

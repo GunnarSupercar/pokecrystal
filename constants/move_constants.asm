@@ -136,8 +136,8 @@
 	const CLAMP        ; 80
 	const SWIFT        ; 81
 	const SKULL_BASH   ; 82
-	const SPIKE_CANNON ; 83
-	const CONSTRICT    ; 84
+	const POISON_JAB   ; 83 ; previously SPIKE_CANNON
+	const DRAGON_CLAW  ; 84 ; previously CONSTRICT
 	const AMNESIA      ; 85
 	const KINESIS      ; 86
 	const SOFTBOILED   ; 87
@@ -176,7 +176,7 @@
 	const THIEF        ; a8
 	const SPIDER_WEB   ; a9
 	const MIND_READER  ; aa
-	const NIGHTMARE    ; ab
+	const OMINOUS WIND ; ab ; previously NIGHTMARE
 	const FLAME_WHEEL  ; ac
 	const SNORE        ; ad
 	const CURSE        ; ae
@@ -244,7 +244,7 @@
 	const MOONLIGHT    ; ec
 	const HIDDEN_POWER ; ed
 	const CROSS_CHOP   ; ee
-	const TWISTER      ; ef
+	const HURRICANE    ; ef ; previously TWISTER
 	const RAIN_DANCE   ; f0
 	const SUNNY_DAY    ; f1
 	const CRUNCH       ; f2
